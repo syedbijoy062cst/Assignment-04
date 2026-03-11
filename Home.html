@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment-04 </title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- tailwind css and daisyui -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font-Awasome -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+     <!--icons-font-asw -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class=" max-w-5xl bg-base-200 mx-auto">
+    
+  <div class="max-w-6xl mx-auto ">
+    <!-- titile -->
+    <h2 class="text-2xl text-bold pt-3 py-4  text-[#002C5C]">Job Application Tracker</h2>
+    <!-- Cards -->
+    <div class="grid grid-cols-3 gap-3">
+      <!-- Total -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Total</p>
+        <h2 class="text-3xl font-bold text-blue-600">8</h2>
+      </div>
+
+      <!-- Interview -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Interview</p>
+        <h2 class="text-3xl font-bold text-green-500">0</h2>
+      </div>
+
+      <!-- Rejected -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Rejected</p>
+        <h2 class="text-3xl font-bold text-red-500">0</h2>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="flex justify-between items-center mb-6 pt-6">
+        <h1 class="text-2xl font-bold text-[#002C5C]">Available Jobs</h1>
+        <p class="text-gray-500">8 jobs</p>
+    </div>
+    <div class="flex gap-3 mb-6">
+    <button class="btn btn-primary btn-sm">All</button>
+    <button class="btn btn-none btn-sm  shadow">Interview</button>
+    <button class="btn btn-none btn-sm shadow">Rejected</button>
+  </div>
+  <section>
+    <div>
+        <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg shadow">
+
+  <!-- Icon -->
+  <div class="w-16 h-16 bg-blue-100 flex items-center  justify-center rounded-lg mb-4">
+    <img src="./img/jobs.png" alt="">
+  </div>
+
+  <!-- Title -->
+  <h2 class="text-xl font-semibold text-gray-700">
+    No jobs available
+  </h2>
+
+  <!-- Subtitle -->
+  <p class="text-sm text-gray-500 mt-1">
+    Check back soon for new job opportunities
+  </p>
+
+</div>
+    </div>
+  </section>
