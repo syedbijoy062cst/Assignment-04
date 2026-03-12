@@ -43,19 +43,20 @@
       </div>
     </div>
   </div>
-  <section>
     <div class="flex justify-between items-center mb-6 pt-6">
         <h1 class="text-2xl font-bold text-[#002C5C]">Available Jobs</h1>
         <p class="text-gray-500">8 jobs</p>
     </div>
     <div class="flex gap-3 mb-6">
-    <button class="btn btn-primary btn-sm">All</button>
-    <button class="btn btn-none btn-sm  shadow">Interview</button>
-    <button class="btn btn-none btn-sm shadow">Rejected</button>
+    <button id="tab-all" onclick="switchTab('all')" class="btn  btn-sm cursor-pointer">All</button>
+
+    <button id="tab-interview" onclick="switchTab('interview')" class="btn btn-none btn-sm   cursor-pointer">Interview</button>
+    
+    <button id="tab-rejected" onclick="switchTab('rejected')" class="btn  btn-sm cursor-pointer">Rejected</button>
   </div>
    <!-- Job Card-1  -->
- <div class="card bg-white shadow-md mb-6">
-  <div class="card-body">
+ <div id="job-container" class="card  bg-white shadow-md mb-6">
+  <div id="all-containar" class="card-body hidden">
 
     <div class="flex justify-between items-center">
       <h2 class="card-title">Mobile First Corp</h2>
@@ -87,9 +88,19 @@
 
   </div>
 </div>
+
+
+<!-- interview section  -->
+ <section id="Interview-container" class="hidden">Interview Section</section>
+
+ <section id="Rejected-container" class=" hidden">Rejected Section</section>
+
+
+
+
 <!-- card-2 -->
-  <div class="card bg-white shadow-md mb-6">
-  <div class="card-body">
+  <div class="card hidden bg-white shadow-md mb-6">
+  <div id="all-containar" class="card-body">
 
     <div class="flex justify-between items-center">
       <h2 class="card-title">WebFlow Agency</h2>
@@ -125,7 +136,7 @@ Part-time
   </div>
 </div>
 <!-- card-3 -->
-  <div class="card bg-white shadow-md mb-6">
+  <div class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -162,7 +173,7 @@ Part-time
   </div>
 </div>
 <!-- card-4 -->
-  <div class="card bg-white shadow-md mb-6">
+  <div class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -199,7 +210,7 @@ Part-time
   </div>
 </div>
 <!-- card-5 -->
-  <div class="card bg-white shadow-md mb-6">
+  <div class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -236,7 +247,7 @@ Part-time
   </div>
 </div>
 <!-- card- -->
-  <div class="card bg-white shadow-md mb-6">
+  <div class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -273,7 +284,7 @@ Full-time
   </div>
 </div>
 <!-- card-7 -->
-  <div class="card bg-white shadow-md mb-6">
+  <div class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -310,7 +321,7 @@ Full-time
   </div>
 </div>
 <!-- card-8 -->
-  <div class="card bg-white shadow-md mb-6">
+  <div  class="card hidden bg-white shadow-md mb-6">
   <div class="card-body">
 
     <div class="flex justify-between items-center">
@@ -347,6 +358,64 @@ Full-time
   </div>
 </div>
   </section>
-  <script src="script/btn.js"></script>
+
+<!-- Rejected section -->
+  <section class="hidden">
+  <div class="max-w-6xl mx-auto">
+    <!-- titile -->
+    <h2 class="text-2xl text-bold pt-3 py-4  text-[#002C5C]">Job Application Tracker</h2>
+    <!-- Cards -->
+    <div class="grid grid-cols-3 gap-3">
+      <!-- Total -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Total</p>
+        <h2 class="text-3xl font-bold text-blue-600">0</h2>
+      </div>
+
+      <!-- Interview -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Interview</p>
+        <h2 class="text-3xl font-bold text-green-500">0</h2>
+      </div>
+
+      <!-- Rejected- -->
+      <div class="bg-white p-6 rounded-md shadow">
+        <p class="text-gray-500">Rejected</p>
+        <h2 class="text-3xl font-bold text-red-500">0</h2>
+      </div>
+    </div>
+  </div>
+    <div class="flex justify-between items-center mb-6 pt-6">
+        <h1 class="text-2xl font-bold text-[#002C5C]">Available Jobs</h1>
+        <p class="text-gray-500">8 jobs</p>
+    </div>
+    <div class="flex gap-3 mb-6">
+    <button class="btn btn-none btn-sm shadow">All</button>
+    <button class="btn btn-none btn-sm  shadow">Interview</button>
+    <button class="btn btn-none btn-sm shadow">Rejected</button>
+  </div>
+    <div>
+        <div class="flex flex-col items-center justify-center py-20 bg-gray-50 rounded-lg shadow">
+
+  <!-- Icon -->
+  <div class="w-16 h-16 bg-blue-100 flex items-center  justify-center rounded-lg mb-4">
+    <img src="./img/jobs.png" alt="">
+  </div>
+
+  <!-- Title -->
+  <h2 class="text-xl font-semibold text-gray-700">
+    No jobs available
+  </h2>
+
+  <!-- Subtitle -->
+  <p class="text-sm text-gray-500 mt-1">
+    Check back soon for new job opportunities
+  </p>
+
+</div>
+    </div>
+  </section>
+
+  <script src="script/index.js"></script>
 </body>
 </html>
