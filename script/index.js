@@ -43,4 +43,18 @@ function switchTab(tab){
     }
 
 }
+
+
+//  stat update
+
+    const totalStat = document.getElementById("start-total");
+    const interviewStat = document.getElementById("stat-interview");
+    const rejectedStat = document.getElementById("stat-rejected");
+
+    // Example values - replace with actual logic
+    totalStat.innerText = allContainer.children.length;
+    // interviewStat.textContent = "0";
+    // rejectedStat.textContent = "0"
+
+
 switchTab(currentTab);
