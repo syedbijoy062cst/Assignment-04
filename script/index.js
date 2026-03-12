@@ -95,7 +95,7 @@ function switchTab(tab){
         
     }
 
-
+    updateStats();
 
    });
 
@@ -113,5 +113,13 @@ function switchTab(tab){
     interviewStat.innerText = counts.interview;
     rejectedStat.innerText = counts.rejected;
     availableStat.innerText = counts[currentTab];
+
+    if(counts[currentTab] < 1){
+        emptyState.classList.remove("hidden");
+
+    }
+    else{
+        emptyState.classList.add("hidden");2
+    }
    }
  updateStats();
