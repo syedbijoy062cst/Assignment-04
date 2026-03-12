@@ -64,16 +64,19 @@ function switchTab(tab){
     const clickedElement = event.target;
 
     const card = clickedElement.closest(".card");
-    
+    const parent = card.parentNode;
+    const notApplied = card.querySelector(".not-applied");
     
     if(clickedElement.classList.contains("btn-interview")){
+        notApplied.innerText = "INTERVIEW";
         interviewContainer.appendChild(card);        
     }
     if(clickedElement.classList.contains("btn-rejected")){
+        notApplied.innerText = "REJECTED";
         rejectedContainer.appendChild(card);        
     }
     if(clickedElement.classList.contains("btn-delete")){
-        // console.log("delete clicked");
+        parent.removeChild(card);
         
     }
 
