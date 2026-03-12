@@ -57,4 +57,27 @@ function switchTab(tab){
     // rejectedStat.textContent = "0"
 
 
-switchTab(currentTab);
+   switchTab(currentTab);
+
+   document.getElementById("jobs-container")
+   .addEventListener("click", function(event){
+    const clickedElement = event.target;
+
+    const card = clickedElement.closest(".card");
+    
+    
+    if(clickedElement.classList.contains("btn-interview")){
+        interviewContainer.appendChild(card);        
+    }
+    if(clickedElement.classList.contains("btn-rejected")){
+        rejectedContainer.appendChild(card);        
+    }
+    if(clickedElement.classList.contains("btn-delete")){
+        // console.log("delete clicked");
+        
+    }
+
+
+
+   });
+
