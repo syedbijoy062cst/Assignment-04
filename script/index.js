@@ -69,7 +69,8 @@ function switchTab(tab){
     
     if(clickedElement.classList.contains("btn-interview")){
         notApplied.innerText = "INTERVIEW";
-        interviewContainer.appendChild(card);        
+        interviewContainer.appendChild(card); 
+        updateStats();
     }
     if(clickedElement.classList.contains("btn-rejected")){
         notApplied.innerText = "REJECTED";
@@ -84,3 +85,9 @@ function switchTab(tab){
 
    });
 
+   function updateStats(){
+    totalStat.innerText = allContainer.children.length;
+    interviewStat.innerText = interviewContainer.children.length;
+    rejectedStat.innerText = rejectedContainer.children.length;
+   }
+ updateStats();
